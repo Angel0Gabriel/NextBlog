@@ -1,5 +1,28 @@
 import { BlogList } from "@/templates/blog/blog-list";
 import { allPosts } from "contentlayer/generated";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Dicas e estratégias para impulsionar o seu negócio",
+  robots: "index, follow",
+  openGraph: {
+    title: "Blog",
+    description: "Dicas e estratégias para impulsionar o seu negócio",
+    // url: 'URL_PRODUCAO'
+    siteName: "Blog",
+    locale: "pt_BR",
+    type: "website",
+    // images: [
+    //   {
+    //     url: 'URL_PRODUCAO',
+    //     width: 800,
+    //     height: 600,
+    //     alt: 'Site.set'
+    //   }
+    // ]
+  },
+};
 
 export default function BlogListPage() {
   const sortedPosts = allPosts.sort(
